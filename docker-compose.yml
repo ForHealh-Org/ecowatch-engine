@@ -1,0 +1,11 @@
+services:
+  engine:
+    build: .
+    container_name: python_ML_env
+    image: ecowatch:v0.1
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    command: "python -u src/main.py"
